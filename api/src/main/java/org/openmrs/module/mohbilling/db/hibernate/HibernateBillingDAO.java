@@ -895,7 +895,7 @@ public class HibernateBillingDAO implements BillingDAO {
 		//Criteria crit = sessionFactory.getCurrentSession().createCriteria(ServiceCategory.class).add(Restrictions.eq("insurance", rama));
 
 		//List<ServiceCategory> ramaSC = crit.list();
-		List <Object[]> ramaSC=sessionFactory.getCurrentSession().createSQLQuery("select distinct name,description from moh_bill_service_category").list();
+		List <Object[]> ramaSC=sessionFactory.getCurrentSession().createSQLQuery("select distinct name,description from moh_bill_hop_service").list();
 		// map service category to insurance
 
 		List<ServiceCategory> serviceCategoryCheckList=Context.getService(BillingService.class).getAllServiceCategories();
