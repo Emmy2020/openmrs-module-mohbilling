@@ -52,7 +52,9 @@ public class ParametersConversion {
 		DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		DateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
 		
-		String endTimeStr = endHourStr + ":" + endMinuteStr + ":59";
+		//String endTimeStr = endHourStr + ":" + endMinuteStr + ":59";
+		String endTimeStr = "23:59:59";
+
 
 		Date endDate =null;
 		try {
