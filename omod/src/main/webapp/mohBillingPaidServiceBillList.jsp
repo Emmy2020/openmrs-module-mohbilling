@@ -1,9 +1,11 @@
 <%@ include file="/WEB-INF/template/include.jsp"%>
 <openmrs:htmlInclude file="/scripts/calendar/calendar.js" />
 <%@ taglib prefix="billingtag" uri="/WEB-INF/view/module/mohbilling/taglibs/billingtag.tld" %>
-
+<c:if test="${not payment.voided }">
 <div style="float: right;"><a href="searchBillPayment.form?paymentId=${payment.billPaymentId}&consommationId=${consommation.consommationId}&print=true">Print Payment</a></div>
+</c:if>
 <br/>
+<c:if test="${not payment.voided }">
 <b class="boxHeader">Bill Payment</b>
 
 <div class="box" style="clear: both;">
@@ -18,7 +20,13 @@
 		</tr>
 		<c:if test="${!empty paidItems}">
 				<tr>
-					<td class="columnHeader"><a href="patientBillPayment.form?consommationId=${consommation.consommationId}&ipCardNumber=${consommation.beneficiary.policyIdNumber}">View</a></td>
+					<!-- <td class="columnHeader"><a href="patientBillPayment.form?consommationId=${consommation.consommationId}&ipCardNumber=${consommation.beneficiary.policyIdNumber}">View</a></td> -->
+					<td class="columnHeader">
+                     <a href="patientBillPayment.form?consommationId=${consommation.consommationId}&ipCardNumber=${consommation.beneficiary.policyIdNumber}">View</a>|
+                     <a href="searchBillPayment.form?paymentId=${payment.billPaymentId}&consommationId=${consommation.consommationId}&editPay=true">Edit</a>
+                     </td>
+
+
 					<th class="columnHeader" style="font-size: 1em; font-weight: bold;" colspan="4"><center>Date: ${consommation.createdDate}, Total Amount : ${payment.amountPaid} Rwf, Insurance : ${consommation.beneficiary.insurancePolicy.insurance.name}, Policy Card No. : ${consommation.beneficiary.policyIdNumber}</center></th>
 					
 					<openmrs:hasPrivilege privilege="Submit a refund">
@@ -48,4 +56,5 @@
 	      </c:if>
 	</table>
 </div>
+</c:if>
 

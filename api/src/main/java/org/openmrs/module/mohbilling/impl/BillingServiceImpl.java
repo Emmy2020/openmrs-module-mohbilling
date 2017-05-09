@@ -46,7 +46,7 @@ public class BillingServiceImpl implements BillingService {
 	/**
 	 * (non-Javadoc)
 	 * 
-	 * @see org.openmrs.module.mohbilling.service.BillingService#getInsurance(java
+	 * @see BillingService#getInsurance(java
 	 *      .lang.Integer)
 	 */
 	@Override
@@ -58,7 +58,7 @@ public class BillingServiceImpl implements BillingService {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.service.BillingService#getInsurancePolicy
+	 * @see BillingService#getInsurancePolicy
 	 *      (java.lang.Integer)
 	 */
 	@Override
@@ -71,7 +71,7 @@ public class BillingServiceImpl implements BillingService {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.service.BillingService#getPatientBill(java
+	 * @see BillingService#getPatientBill(java
 	 *      .lang.Integer)
 	 */
 	@Override
@@ -83,7 +83,7 @@ public class BillingServiceImpl implements BillingService {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.service.BillingService#saveInsurance(org
+	 * @see BillingService#saveInsurance(org
 	 *      .openmrs.module.mohbilling.model.Insurance)
 	 */
 	@Override
@@ -97,7 +97,7 @@ public class BillingServiceImpl implements BillingService {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.service.BillingService#saveInsurancePolicy
+	 * @see BillingService#saveInsurancePolicy
 	 *      (org.openmrs.module.mohbilling.model.InsurancePolicy)
 	 */
 	@Override
@@ -113,7 +113,7 @@ public class BillingServiceImpl implements BillingService {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.service.BillingService#savePatientBill(org.openmrs.module.mohbilling.model.PatientBill)
+	 * @see BillingService#savePatientBill(PatientBill)
 	 */
 	@Override
 	public void savePatientBill(PatientBill bill) {
@@ -124,7 +124,7 @@ public class BillingServiceImpl implements BillingService {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.service.BillingService#getFacilityServicePrice(Integer)
+	 * @see BillingService#getFacilityServicePrice(Integer)
 	 */
 	@Override
 	public FacilityServicePrice getFacilityServicePrice(Integer id) {
@@ -134,7 +134,7 @@ public class BillingServiceImpl implements BillingService {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.service.BillingService#saveFacilityServicePrice(org.openmrs.module.mohbilling.model.FacilityServicePrice)
+	 * @see BillingService#saveFacilityServicePrice(FacilityServicePrice)
 	 */
 	@Override
 	public void saveFacilityServicePrice(FacilityServicePrice fsp) {
@@ -147,7 +147,7 @@ public class BillingServiceImpl implements BillingService {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.service.BillingService#getAllInsurancePolicies()
+	 * @see BillingService#getAllInsurancePolicies()
 	 */
 	@Override
 	public List<InsurancePolicy> getAllInsurancePolicies() {
@@ -158,7 +158,7 @@ public class BillingServiceImpl implements BillingService {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.service.BillingService#getAllInsurances()
+	 * @see BillingService#getAllInsurances()
 	 */
 	@Override
 	public List<Insurance> getAllInsurances() throws DAOException {
@@ -169,7 +169,7 @@ public class BillingServiceImpl implements BillingService {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.service.BillingService#getAllPatientBills()
+	 * @see BillingService#getAllPatientBills()
 	 */
 	@Override
 	public List<PatientBill> getAllPatientBills() throws DAOException {
@@ -180,7 +180,7 @@ public class BillingServiceImpl implements BillingService {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.service.BillingService#getAllFacilityServicePrices()
+	 * @see BillingService#getAllFacilityServicePrices()
 	 */
 	@Override
 	public List<FacilityServicePrice> getAllFacilityServicePrices()
@@ -207,7 +207,7 @@ public class BillingServiceImpl implements BillingService {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.service.BillingService#getInsurancePolicyByCardNo(String)
+	 * @see BillingService#getInsurancePolicyByCardNo(String)
 	 */
 	@Override
 	public InsurancePolicy getInsurancePolicyByCardNo(String insuranceCardNo) {
@@ -229,7 +229,7 @@ public class BillingServiceImpl implements BillingService {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.service.BillingService#getThirdParty(Integer)
+	 * @see BillingService#getThirdParty(Integer)
 	 */
 	@Override
 	public ThirdParty getThirdParty(Integer thirdPartyId) throws DAOException {
@@ -238,7 +238,7 @@ public class BillingServiceImpl implements BillingService {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.service.BillingService#getAllThirdParties()
+	 * @see BillingService#getAllThirdParties()
 	 */
 	@Override
 	public List<ThirdParty> getAllThirdParties() {
@@ -247,7 +247,7 @@ public class BillingServiceImpl implements BillingService {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.service.BillingService#saveThirdParty(org.openmrs.module.mohbilling.model.ThirdParty)
+	 * @see BillingService#saveThirdParty(ThirdParty)
 	 */
 	@Override
 	public void saveThirdParty(ThirdParty thirdParty) throws DAOException {
@@ -256,7 +256,7 @@ public class BillingServiceImpl implements BillingService {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.service.BillingService#getBeneficiaryByPolicyNumber(String)
+	 * @see BillingService#getBeneficiaryByPolicyNumber(String)
 	 */
 	@Override
 	public Beneficiary getBeneficiaryByPolicyNumber(String policyIdNumber)
@@ -266,7 +266,7 @@ public class BillingServiceImpl implements BillingService {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.service.BillingService#getInsurancePolicyByBeneficiary(org.openmrs.module.mohbilling.model.Beneficiary)
+	 * @see BillingService#getInsurancePolicyByBeneficiary(Beneficiary)
 	 */
 	@Override
 	public InsurancePolicy getInsurancePolicyByBeneficiary(
@@ -276,7 +276,7 @@ public class BillingServiceImpl implements BillingService {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.service.BillingService#getValidBillableService(Integer)
+	 * @see BillingService#getValidBillableService(Integer)
 	 */
 	@Override
 	public BillableService getBillableService(Integer id) {
@@ -285,7 +285,7 @@ public class BillingServiceImpl implements BillingService {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.service.BillingService#getServiceCategory(Integer)
+	 * @see BillingService#getServiceCategory(Integer)
 	 */
 	@Override
 	public ServiceCategory getServiceCategory(Integer id) {
@@ -294,7 +294,7 @@ public class BillingServiceImpl implements BillingService {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.service.BillingService#getBillableServiceByCategory(org.openmrs.module.mohbilling.model.ServiceCategory)
+	 * @see BillingService#getBillableServiceByCategory(ServiceCategory)
 	 */
 	@Override
 	public List<BillableService> getBillableServiceByCategory(ServiceCategory sc) {
@@ -303,7 +303,7 @@ public class BillingServiceImpl implements BillingService {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.service.BillingService#getFacilityServiceByConcept(org.openmrs.Concept)
+	 * @see BillingService#getFacilityServiceByConcept(Concept)
 	 */
 	@Override
 	public FacilityServicePrice getFacilityServiceByConcept(Concept concept) {
@@ -312,7 +312,7 @@ public class BillingServiceImpl implements BillingService {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.service.BillingService#getBillableServicesByFacilityService(org.openmrs.module.mohbilling.model.FacilityServicePrice)
+	 * @see BillingService#getBillableServicesByFacilityService(FacilityServicePrice)
 	 */
 	@Override
 	public List<BillableService> getBillableServicesByFacilityService(
@@ -322,7 +322,7 @@ public class BillingServiceImpl implements BillingService {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.service.BillingService#getBillableServicesByInsurance(org.openmrs.module.mohbilling.model.Insurance)
+	 * @see BillingService#getBillableServicesByInsurance(Insurance)
 	 */
 	@Override
 	public List<BillableService> getBillableServicesByInsurance(
@@ -332,7 +332,7 @@ public class BillingServiceImpl implements BillingService {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.service.BillingService#getPolicyIdByPatient(Integer)
+	 * @see BillingService#getPolicyIdByPatient(Integer)
 	 */
 	@Override
 	public List<String[]> getPolicyIdByPatient(Integer patientId) {
@@ -440,8 +440,8 @@ public class BillingServiceImpl implements BillingService {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.service.BillingService#getRefundedBills(Date,
-	 *      Date, org.openmrs.User)
+	 * @see BillingService#getRefundedBills(Date,
+	 *      Date, User)
 	 */
 	@Override
 	public Set<PatientBill> getRefundedBills(Date startDate, Date endDate,
@@ -913,6 +913,7 @@ public class BillingServiceImpl implements BillingService {
 
 	@Override
 	public InsurancePolicy getInsurancePolicyByThirdParty(ThirdParty t) {
+		System.out.print(" am getting in getinsurancepolicybythird party in billingserviceImplement "+t);
 		return billingDAO.getInsurancePolicyByThirdParty(t);
 	}
 

@@ -69,7 +69,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	/**
 	 * (non-Javadoc)
 	 * 
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getInsurance(org.openmrs.
+	 * @see BillingDAO#getInsurance(org.openmrs.
 	 *      module.mohbilling.model.Insurance)
 	 */
 	@Override
@@ -87,7 +87,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getInsurancePolicy(org.openmrs
+	 * @see BillingDAO#getInsurancePolicy(org.openmrs
 	 *      .module.mohbilling.model.InsurancePolicy)
 	 */
 	@Override
@@ -98,7 +98,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getInsurancePolicyByCardNo(String)
+	 * @see BillingDAO#getInsurancePolicyByCardNo(String)
 	 */
 	@Override
 	public InsurancePolicy getInsurancePolicyByCardNo(String insuranceCardNo) {
@@ -112,7 +112,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getFacilityServicePrice(Integer)
+	 * @see BillingDAO#getFacilityServicePrice(Integer)
 	 */
 	@Override
 	public FacilityServicePrice getFacilityServicePrice(Integer id) {
@@ -123,7 +123,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getBillableServiceByConcept(Concept
+	 * @see BillingDAO#getBillableServiceByConcept(Concept
 	 *      concept, Insurance insurance)
 	 */
 	@Override
@@ -138,7 +138,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#saveFacilityServicePrice(org.openmrs.module.mohbilling.model.FacilityServicePrice)
+	 * @see BillingDAO#saveFacilityServicePrice(FacilityServicePrice)
 	 */
 	@Override
 	public void saveFacilityServicePrice(FacilityServicePrice fsp) {
@@ -148,7 +148,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getPatientBill(org.openmrs
+	 * @see BillingDAO#getPatientBill(org.openmrs
 	 *      .module.mohbilling.model.PatientBill)
 	 */
 	@Override
@@ -161,7 +161,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getPatientBill(org.openmrs
+	 * @see BillingDAO#getPatientBill(org.openmrs
 	 *      .module.mohbilling.model.PatientBill)
 	 */
 	@Override
@@ -174,7 +174,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#saveThirdParty(org.openmrs
+	 * @see BillingDAO#saveThirdParty(org.openmrs
 	 *      .module.mohbilling.model.ThirdParty)
 	 */
 	@Override
@@ -186,7 +186,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#saveInsurance(org.openmrs
+	 * @see BillingDAO#saveInsurance(org.openmrs
 	 *      .module.mohbilling.model.Insurance)
 	 */
 	@Override
@@ -198,7 +198,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#saveInsurancePolicy(org.openmrs
+	 * @see BillingDAO#saveInsurancePolicy(org.openmrs
 	 *      .module.mohbilling.model.InsurancePolicy)
 	 */
 	@Override
@@ -211,7 +211,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#savePatientBill(org.openmrs
+	 * @see BillingDAO#savePatientBill(org.openmrs
 	 *      .module.mohbilling.model.PatientBill)
 	 */
 	@Override
@@ -223,7 +223,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getAllInsurancePolicies()
+	 * @see BillingDAO#getAllInsurancePolicies()
 	 */
 	@Override
 	public List<InsurancePolicy> getAllInsurancePolicies() {
@@ -235,7 +235,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getAllInsurances()
+	 * @see BillingDAO#getAllInsurances()
 	 */
 	@Override
 	public List<Insurance> getAllInsurances() throws DAOException {
@@ -248,7 +248,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getAllPatientBills()
+	 * @see BillingDAO#getAllPatientBills()
 	 */
 	@Override
 	public List<PatientBill> getAllPatientBills() throws DAOException {
@@ -260,7 +260,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getAllFacilityServicePrices()
+	 * @see BillingDAO#getAllFacilityServicePrices()
 	 */
 	@Override
 	public List<ServiceCategory> getAllServiceCategories() throws DAOException {
@@ -272,7 +272,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getAllFacilityServicePrices()
+	 * @see BillingDAO#getAllFacilityServicePrices()
 	 */
 	@Override
 	public List<FacilityServicePrice> getAllFacilityServicePrices()
@@ -284,7 +284,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getAllBillableServices()
+	 * @see BillingDAO#getAllBillableServices()
 	 */
 	@Override
 	public List<BillableService> getAllBillableServices() {
@@ -293,7 +293,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getAllThirdParties()
+	 * @see BillingDAO#getAllThirdParties()
 	 */
 	@Override
 	public List<ThirdParty> getAllThirdParties() {
@@ -362,7 +362,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#buildCohort(org.openmrs.module.mohbilling.model.Insurance,
+	 * @see BillingDAO#buildCohort(Insurance,
 	 *      Date, Date, Integer, String)
 	 */
 	@Override
@@ -561,7 +561,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getBeneficiaryByPolicyNumber(String)
+	 * @see BillingDAO#getBeneficiaryByPolicyNumber(String)
 	 */
 	@Override
 	public Beneficiary getBeneficiaryByPolicyNumber(String policyIdNumber) {
@@ -572,7 +572,7 @@ public class HibernateBillingDAO implements BillingDAO {
 				.uniqueResult();
 	}
 	/**
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getInsurancePolicyByBeneficiary(org.openmrs.module.mohbilling.model.Beneficiary)
+	 * @see BillingDAO#getInsurancePolicyByBeneficiary(Beneficiary)
 	 */
 	@Override
 	public InsurancePolicy getInsurancePolicyByBeneficiary(
@@ -587,7 +587,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getServiceCategory(Integer)
+	 * @see BillingDAO#getServiceCategory(Integer)
 	 */
 	@Override
 	public ServiceCategory getServiceCategory(Integer id) {
@@ -597,7 +597,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getBillableServiceByCategory(org.openmrs.module.mohbilling.model.ServiceCategory)
+	 * @see BillingDAO#getBillableServiceByCategory(ServiceCategory)
 	 */
 	@Override
 	public List<BillableService> getBillableServiceByCategory(ServiceCategory sc) {
@@ -608,7 +608,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getFacilityServiceByConcept(org.openmrs.Concept)
+	 * @see BillingDAO#getFacilityServiceByConcept(Concept)
 	 */
 	@Override
 	public FacilityServicePrice getFacilityServiceByConcept(Concept concept) {
@@ -628,7 +628,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getBillableServicesByInsurance(org.openmrs.module.mohbilling.model.Insurance)
+	 * @see BillingDAO#getBillableServicesByInsurance(Insurance)
 	 */
 	@Override
 	public List<BillableService> getBillableServicesByInsurance(
@@ -640,7 +640,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	}
 
 	/**
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getPolicyIdByPatient(Integer)
+	 * @see BillingDAO#getPolicyIdByPatient(Integer)
 	 */
 	@Override
 	public List<String[]> getPolicyIdByPatient(Integer patientId) {
@@ -669,6 +669,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	public List<BillPayment> getBillPaymentsByDateAndCollector(Date startDate,	Date endDate, User collector) {
 		Criteria crit = sessionFactory.getCurrentSession().createCriteria(BillPayment.class);
 				crit.add(Restrictions.between("dateReceived", startDate, endDate));
+		        crit.add(Restrictions.eq("voided", false));
 				if(collector!=null)
 				crit.add(Restrictions.eq("collector", collector));
 
@@ -679,7 +680,7 @@ public class HibernateBillingDAO implements BillingDAO {
 	/**
 	 * (non-Javadoc)
 	 *
-	 * @see org.openmrs.module.mohbilling.db.BillingDAO#getBillableServiceByConcept(Concept
+	 * @see BillingDAO#getBillableServiceByConcept(Concept
 	 *      concept, Insurance insurance)
 	 */
 	@Override
@@ -899,7 +900,6 @@ public class HibernateBillingDAO implements BillingDAO {
 		// map service category to insurance
 
 		List<ServiceCategory> serviceCategoryCheckList=Context.getService(BillingService.class).getAllServiceCategories();
-
 		for (Object[] sc : ramaSC) {
 			ServiceCategory scToMapToInsurance = new ServiceCategory();
 			//scToMapToInsurance.setName(sc.getName());
@@ -911,14 +911,15 @@ public class HibernateBillingDAO implements BillingDAO {
 			scToMapToInsurance.setInsurance(insurance);
 			scToMapToInsurance.setCreator(Context.getAuthenticatedUser());
 			for(ServiceCategory scExisting:serviceCategoryCheckList){
-				if(!scExisting.getName().equals(sc[0].toString())&& scExisting.getInsurance().getInsuranceId()!=insurance.getInsuranceId()) {
+				if(!(scExisting.getName().toString().equals(sc[0].toString())&& scExisting.getInsurance().getInsuranceId()==insurance.getInsuranceId())) {
 					insurance.addServiceCategory(scToMapToInsurance);
 				}
 				}
+			//System.out.println("Before Saving an Insurance :"+sc[0].toString());
 			//insurance.addServiceCategory(scToMapToInsurance);
 			Context.getService(BillingService.class).saveInsurance(insurance);
 		}
-		
+		System.out.println("After Saving an Insurance");
 		List<Object[]> baseBillableServices = getBaseBillableServices(insurance);
 		List<Object[]> basePharmacyItems = getPharmacyBaseBillableServices(insurance);
 		
@@ -1341,6 +1342,7 @@ public class HibernateBillingDAO implements BillingDAO {
 		public List<PaidServiceBill> getPaidItemsByBillPayments(List<BillPayment> payments) {
 			Criteria criteria = sessionFactory.getCurrentSession().createCriteria(PaidServiceBill.class);
 	      		criteria.add(Restrictions.in("billPayment", payments));
+			    criteria.add(Restrictions.eq("voided", false));
 	      		List<PaidServiceBill> paidItems = new ArrayList<PaidServiceBill>();
 	      		paidItems = criteria.list();
 
@@ -1422,6 +1424,7 @@ public class HibernateBillingDAO implements BillingDAO {
 		public List<PaymentRefund> getRefundsByBillPayment(BillPayment payment) {
 			Criteria crit = sessionFactory.getCurrentSession().createCriteria(PatientServiceBill.class);
 				crit.add(Expression.eq("consommation", payment));
+			    crit.add(Restrictions.eq("voided", false));
 				return crit.list();
 		}
 
@@ -1440,9 +1443,15 @@ public class HibernateBillingDAO implements BillingDAO {
 
 		@Override
 		public InsurancePolicy getInsurancePolicyByThirdParty(ThirdParty t) {
-			return (InsurancePolicy) sessionFactory.getCurrentSession().createCriteria(InsurancePolicy.class)
-					.add(Restrictions.eq("thirdParty", t))
-					.uniqueResult();
+			System.out.print(" am getting in getinsurancepolicybythird party in hibernate "+t.getThirdPartyId());
+
+
+			InsurancePolicy insurancePolicy =  (InsurancePolicy) sessionFactory.getCurrentSession().createCriteria(InsurancePolicy.class)
+					.add(Restrictions.eq("thirdParty",t)).list().get(0);
+					//.uniqueResult();
+
+			System.out.print(" insurancePolicyinsurancePolicyinsurancePolicyinsurancePolicy ");
+			return insurancePolicy;
 		}
 
 		/* (non-Javadoc)
