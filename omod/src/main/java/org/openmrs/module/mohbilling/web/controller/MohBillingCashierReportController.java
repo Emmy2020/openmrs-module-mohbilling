@@ -96,7 +96,7 @@ public class MohBillingCashierReportController extends
 					 }
 					 else{
 						 paidItems = BillPaymentUtil.getPaidItemsByBillPayments(payments);
-						 mav.addObject("reportMsg", "Total Received Amount From "+startDateStr+" To "+endDateStr);
+						 mav.addObject("reportMsg", "Total Charged Amount From "+startDateStr+" To "+endDateStr);
 					 }
 
 				 paidItems = BillPaymentUtil.getPaidItemsByBillPayments(payments);
@@ -115,7 +115,11 @@ public class MohBillingCashierReportController extends
 				
 				request.getSession().setAttribute("paidServiceRevenues" , paidServiceRevenues);
 				request.getSession().setAttribute("totalReceivedAmount", BillPaymentUtil.getTotalPaid(payments));
-				
+				request.getSession().setAttribute("repCollector", collector);
+				request.getSession().setAttribute("repStartDate", startDate);
+				request.getSession().setAttribute("repEndDate", endDate);
+
+
 			/*} catch (Exception e) {
 				request.getSession().setAttribute(WebConstants.OPENMRS_ERROR_ATTR,
 						"No payment found !");
@@ -131,10 +135,15 @@ public class MohBillingCashierReportController extends
 		if(request.getParameter("print")!=null){
 			 List<PaidServiceRevenue> paidServiceRevenues = (List<PaidServiceRevenue>) request.getSession().getAttribute("paidServiceRevenues" );
 			 BigDecimal amount = (BigDecimal)request.getSession().getAttribute("totalReceivedAmount");
-			 FileExporter fexp = new FileExporter();
+			User repCollector=(User)request.getSession().getAttribute("repCollector");
+			Date repStartDate=(Date)request.getSession().getAttribute("repStartDate");
+			Date repEndDate=(Date)request.getSession().getAttribute("repEndDate");
+
+			FileExporter fexp = new FileExporter();
 			 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 				String fileName = "cashier_daily_report_on_"+df.format(new Date())+".pdf";
-			    fexp.printCashierReport(request, response, amount,paidServiceRevenues, fileName);
+			    //fexp.printCashierReport(request, response, amount,paidServiceRevenues, fileName);
+			fexp.printCashierReport(request, response, amount,paidServiceRevenues, fileName,repCollector,repStartDate,repEndDate);
 		}
 		return mav;
 }
