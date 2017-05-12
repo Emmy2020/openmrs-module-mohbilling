@@ -114,8 +114,10 @@
 				<td>Insurance Name</td>
 				<td><select name="insurancePolicyInsurance">
 						<c:forEach items="${insurances}" var="insurance">
+						<c:if test="${insurance.category!='BASE'}">
 							<option value="${insurance.insuranceId}"
 								<c:if test="${insurance.insuranceId==insurancePolicy.insurance.insuranceId}">selected='selected'</c:if>>${insurance.name}</option>
+						</c:if>
 						</c:forEach>
 				</select></td>
 			</tr>

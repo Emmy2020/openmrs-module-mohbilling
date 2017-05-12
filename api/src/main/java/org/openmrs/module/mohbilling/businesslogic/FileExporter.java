@@ -69,7 +69,10 @@ public class FileExporter {
 	            document.add(new Paragraph("\n"));
 	           // displayFooter(document,consommation.getBeneficiary().getPatient(), fontselector);
 	            displayFooter(document, consommation.getBeneficiary().getPatient(), Context.getAuthenticatedUser(), null, fontselector);
-		
+				document.add(new Paragraph("\n"));
+				document.add(new Paragraph("\n"));
+				String provider="Clinician: "+consommation.getCreator().getPersonName().toString();
+				displayFooter(document,provider,fontselector);
 	            document.close(); 
 	            
 	        } catch (DocumentException e) {
@@ -579,7 +582,6 @@ public class FileExporter {
 		
 		document.add(table1);
 	}
-
 	public void printGlobalBill(HttpServletRequest request,	HttpServletResponse response, GlobalBill gb,List<ServiceRevenue> sr,String filename) throws Exception{
 		response.setContentType("application/pdf");
 		response.setHeader("Content-Disposition", "attachment; filename=\""+ filename + "\""); // file name

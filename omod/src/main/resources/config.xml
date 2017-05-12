@@ -334,10 +334,14 @@
         <name>Manage deposit</name>
         <description>Allows user to manage admission</description>
      </privilege>
-     
-     
-    
-    
+
+	<!-- Edit Bill -->
+	<privilege>
+		<name>Edit Bill</name>
+		<description>Allows user to Edit Bill</description>
+	</privilege>
+
+
   
 	<!-- Internationalization -->
 	<!-- All message codes should start with @MODULE_ID@.* -->
