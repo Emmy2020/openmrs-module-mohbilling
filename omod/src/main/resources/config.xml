@@ -341,6 +341,11 @@
 		<description>Allows user to Edit Bill</description>
 	</privilege>
 
+	<privilege>
+		<name>Edit Bill Payment</name>
+		<description>Allows users to Edit the amount paid by the patient by entering the new amount</description>
+	</privilege>
+
 
   
 	<!-- Internationalization -->
